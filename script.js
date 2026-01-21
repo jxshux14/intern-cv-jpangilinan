@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	var aboutSection = document.getElementById('about-section');
 	var clickBtn = document.getElementById('click-counter');
 	var clickCountSpan = document.getElementById('click-count');
+	var resetBtn = document.getElementById('reset-counter');
 
 	var count = 0;
 
@@ -48,6 +49,22 @@ document.addEventListener('DOMContentLoaded', function () {
 			setTimeout(function () { clickBtn.style.transform = ''; }, 120);
 		});
 	}
+
+	if (resetBtn) {
+		resetBtn.addEventListener('click', function () {
+			count = 0;
+			clickCountSpan.textContent = count;
+		});
+	}
+
+	// Collapse button functionality
+	var collapseButtons = document.querySelectorAll('.collapse-btn');
+	collapseButtons.forEach(function (btn) {
+		btn.addEventListener('click', function () {
+			var section = btn.closest('section');
+			section.classList.toggle('collapsed');
+		});
+	});
 
 });
 

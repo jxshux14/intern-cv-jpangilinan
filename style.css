@@ -82,11 +82,13 @@ header {
     background-color: var(--surface-alt);
     padding: 30px 20px;
     border-bottom: 3px solid var(--accent);
-    text-align: center;
     border-radius: var(--radius) var(--radius) 0 0;
     margin-bottom: 20px;
     transition: transform var(--transition), background-color var(--transition);
+    position: relative;
 }
+
+
 
 header:hover {
     transform: scale(1.02);
@@ -108,6 +110,14 @@ header h1:hover {
 header p {
     font-size: 1.1rem;
     color: var(--muted-text);
+}
+
+.header-main {
+    text-align: center;
+}
+
+.header-content {
+    text-align: center;
 }
 
 nav ul {
@@ -196,11 +206,10 @@ footer {
 }
 
 .controls {
-    margin-top: 12px;
     display: flex;
     gap: 10px;
     justify-content: center;
-    flex-wrap: wrap;
+    margin-top: 15px;
 }
 
 .controls button {
@@ -221,3 +230,116 @@ footer {
 .hidden {
     display: none;
 }
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-header h2 {
+    margin-bottom: 0;
+    flex: 1;
+}
+
+.collapse-btn {
+    background: none;
+    border: none;
+    color: var(--accent);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--transition);
+}
+
+.collapse-btn:hover {
+    transform: scale(1.1);
+}
+
+.collapse-btn.collapsed::before {
+    content: '+';
+    position: absolute;
+}
+
+section.collapsed .collapse-btn {
+    transform: rotate(180deg);
+}
+
+section.collapsed .section-content {
+    display: none;
+}
+
+/* THEME TOGGLE SWITCH */
+.theme-switch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.theme-switch .material-symbols-outlined {
+    font-size: 22px;
+    color: var(--muted-text);
+    transition: color var(--transition);
+}
+
+/* Switch container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+}
+
+/* Hide checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: var(--button-bg);
+    border-radius: 30px;
+    transition: background-color var(--transition);
+}
+
+/* Knob */
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    transition: transform var(--transition);
+}
+
+/* Checked (Light mode) */
+input:checked + .slider::before {
+    transform: translateX(22px);
+}
+
+/* Icon highlight */
+body.light .icon-sun {
+    color: var(--accent);
+}
+
+body:not(.light) .icon-moon {
+    color: var(--accent);
+}
+

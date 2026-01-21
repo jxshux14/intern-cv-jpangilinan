@@ -8,17 +8,34 @@
 </head>
 <body>
 <header>
-     <h1>
-        <span class="material-symbols-outlined">person</span>
-        Joshua B. Pangilinan
-    </h1>
-    <p>Junior Web & Mobile Application Developer</p>
-    <div class="controls">
-        <button id="theme-toggle">Dark Mode</button>
-        <button id="toggle-about">Hide About</button>
-        <button id="click-counter">Click me (<span id="click-count">0</span>)</button>
+    <div class="header-main">
+        <div class="header-content">
+            <h1>
+                <span class="material-symbols-outlined">person</span>
+                Joshua B. Pangilinan
+            </h1>
+            <p>Junior Web & Mobile Application Developer</p>
+        </div>
+
+        <div class="controls">
+            <button id="toggle-about">Hide About</button>
+            <button id="click-counter">Click me (<span id="click-count">0</span>)</button>
+            <button id="reset-counter">Reset</button>
+        </div>
+    </div>
+
+    <div class="theme-switch">
+        <span class="material-symbols-outlined icon-sun">light_mode</span>
+
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+
+        <span class="material-symbols-outlined icon-moon">dark_mode</span>
     </div>
 </header>
+
 
 <nav>
     <ul>
@@ -30,56 +47,75 @@
 <main>
 
     <section id="about-section">
-        <h2>About Me</h2>
-        <article>
-            <p>
-                Motivated and detail-oriented Information Technology graduate specializing in Web and Mobile Application.
-                Known for my creative sense of style, I am seeking an opportunity to utilize and further develop my skills
-                in web and software development, UI/UX design, and project management. Committed to contributing
-                high-quality, user-focused digital solutions while growing professionally in a dynamic and challenging
-                environment.
-            </p>
-        </article>
+        <div class="section-header">
+            <h2>About Me</h2>
+            <button class="collapse-btn" title="Toggle section">−</button>
+        </div>
+        <div class="section-content">
+            <article>
+                <p>
+                    Motivated and detail-oriented Information Technology graduate specializing in Web and Mobile Application.
+                    Known for my creative sense of style, I am seeking an opportunity to utilize and further develop my skills
+                    in web and software development, UI/UX design, and project management. Committed to contributing
+                    high-quality, user-focused digital solutions while growing professionally in a dynamic and challenging
+                    environment.
+                </p>
+            </article>
+        </div>
     </section>
 
     <section>
-        <h2>Education</h2>
+        <div class="section-header">
+            <h2>Education</h2>
+            <button class="collapse-btn" title="Toggle section">−</button>
+        </div>
+        <div class="section-content">
+            <article>
+                <h3>Bachelor of Science in Information Technology</h3>
+                <p>Specialization in Web and Mobile Application</p>
+                <p>Far Eastern University Diliman</p>
+                <p>2022 – Expected 2026</p>
+            </article>
 
-        <article>
-            <h3>Bachelor of Science in Information Technology</h3>
-            <p>Specialization in Web and Mobile Application</p>
-            <p>Far Eastern University Diliman</p>
-            <p>2022 – Expected 2026</p>
-        </article>
-
-        <article>
-            <h3>Senior High School – STEM Strand</h3>
-            <p>Our Lady of Fatima University, Quezon City</p>
-            <p>2020 – 2022</p>
-        </article>
+            <article>
+                <h3>Senior High School – STEM Strand</h3>
+                <p>Our Lady of Fatima University, Quezon City</p>
+                <p>2020 – 2022</p>
+            </article>
+        </div>
     </section>
 
     <section>
-        <h2>Technical Skills</h2>
-        <ul>
-            <li>HTML & CSS</li>
-            <li>JavaScript</li>
-            <li>PHP</li>
-            <li>MySQL</li>
-            <li>UI/UX Design (Figma)</li>
-        </ul>
+        <div class="section-header">
+            <h2>Technical Skills</h2>
+            <button class="collapse-btn" title="Toggle section">−</button>
+        </div>
+        <div class="section-content">
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>PHP</li>
+                <li>MySQL</li>
+                <li>UI/UX Design (Figma)</li>
+            </ul>
+        </div>
     </section>
 
     <section>
-        <h2>Certifications</h2>
-        <ul>
-            <li>Certiport: Network Security (2025)</li>
-            <li>DevNet Associate (2025)</li>
-            <li>CCNA: Enterprise Networking, Security, and Automation (2024)</li>
-            <li>CCNAv7: Switching, Routing, and Wireless Essentials (2024)</li>
-            <li>CCNAv7: Introduction to Networks (2024)</li>
-            <li>Certiport: Information Technology Specialist in Networking (2024)</li>
-        </ul>
+        <div class="section-header">
+            <h2>Certifications</h2>
+            <button class="collapse-btn" title="Toggle section">−</button>
+        </div>
+        <div class="section-content">
+            <ul>
+                <li>Certiport: Network Security (2025)</li>
+                <li>DevNet Associate (2025)</li>
+                <li>CCNA: Enterprise Networking, Security, and Automation (2024)</li>
+                <li>CCNAv7: Switching, Routing, and Wireless Essentials (2024)</li>
+                <li>CCNAv7: Introduction to Networks (2024)</li>
+                <li>Certiport: Information Technology Specialist in Networking (2024)</li>
+            </ul>
+        </div>
     </section>
 
     <footer>
